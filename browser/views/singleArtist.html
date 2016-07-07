@@ -1,4 +1,13 @@
 <div>
+  <h3>{{ artist.name }}</h3>
+  <ul class="nav nav-tabs">
+    <li><a ui-sref="singleArtist.albums">ALBUMS</a></li>
+    <li><a ui-sref="singleArtist.songs">SONGS</a></li>
+  </ul>
+  <ui-view></ui-view>
+</div>
+
+<!-- <div>
     <h3>{{ artist.name }}</h3>
     <h3>Albums</h3>
     <div class="row">
@@ -36,4 +45,4 @@
         </tr>
       </tbody>
     </table>
-</div>
+</div> -->

@@ -28,12 +28,18 @@ juke.config(function($stateProvider) {
 
 juke.config(function($stateProvider) {
 	$stateProvider.state('singleArtist', {
-		url: "/artists/:artist",
+		url: "/artists/:artistId",
 		templateUrl: "../views/singleArtist.html",
-		controller: function($scope, $stateParams) {
-			// $scope.album =  ;
-			$scope.albumId = $stateParams.album;
-
-		}
+		controller: "ArtistCtrl"
+	})
+	.state('singleArtist.albums', {
+		url: '/albums',
+		templateUrl: '../views/sAAlbums.html',
+		controller: 'ArtistCtrl'
+	})
+	.state('singleArtist.songs', {
+		url: '/songs',
+		templateUrl: '../views/sASongs.html',
+		controller: 'ArtistCtrl'
 	})
 })
